@@ -14,7 +14,20 @@
  */
 
 function whatToDoForLunch(hungry, availableTime) {
-  console.log("I don't know what to do!");
+  var msg = '';
+  if (hungry) {
+    if (availableTime < 20) {
+      msg = "Go pick something up and eat in back in the Lab or in the kitchen, \
+where you can get to know your fellow classmates.";
+    } else if (availableTime >= 20 && availableTime < 45) {
+      msg = "You deserve a break and could try a place in Gastown.";
+    } else {
+      msg = "This is a bootcamp after all and you should probably reconsider.";
+    }
+  } else {
+    msg = "Wait until your're hungry";
+  }
+  console.log(msg);
 }
 
 
